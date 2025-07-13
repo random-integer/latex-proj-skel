@@ -1,0 +1,6 @@
+*.otf
+*.ttf
+*.log
+*.toc
+*.aux
+.git-old

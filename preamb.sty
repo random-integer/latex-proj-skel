@@ -1,0 +1,61 @@
+\ProvidesPackage{preamb}
+
+\usepackage{fontspec}
+\usepackage{libertinus-otf}
+
+\setmonofont{Inconsolata}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Scale = 0.95 ,
+	Extension = .ttf ,
+	UprightFont = *-Regular ,
+	BoldFont = *-Bold
+]
+
+\usepackage[margin = 2cm]{geometry}
+% \usepackage{moresize}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{amsmath}
+% \usepackage{amssymb}
+\usepackage{siunitx}
+% \qty{1.23}{J.mol^{-1}.K^{-1}}
+\usepackage[dvipsnames]{xcolor}
+% \usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage{setspace}
+% \usepackage{pdfpages}
+\usepackage{float}
+\usepackage{wrapfig}
+% \usepackage{adjustbox}
+\usepackage{subcaption}
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
+\onehalfspacing
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+\usepackage{physics}
+
+\definecolor{myblue}{RGB}{38, 70, 83}
+\definecolor{myteal}{RGB}{42, 157, 143}
+\definecolor{myyellow}{RGB}{233, 196, 106}
+\definecolor{myorange}{RGB}{244, 162, 97}
+\definecolor{myred}{RGB}{231, 11, 81}
+
+% 用法：\textmycolorA{字} 或 {\mycolorA 文字}
+% \newcommand{\textmycolorA}[1]{\textcolor{WildStrawberry}{#1}}
+% \newcommand{\mycolorA}{\color{WildStrawberry}}
+% \newcommand{\textmycolorB}[1]{\textcolor{PineGreen}{#1}}
+% \newcommand{\mycolorB}{\color{PineGreen}}
+\newcommand{\textB}[1]{\textcolor{myblue}{#1}}
+\newcommand{\myB}{\color{myblue}}
+\newcommand{\textT}[1]{\textcolor{myteal}{#1}}
+\newcommand{\myT}{\color{myteal}}
+\newcommand{\textY}[1]{\textcolor{myyellow}{#1}}
+\newcommand{\myY}{\color{myyellow}}
+\newcommand{\textO}[1]{\textcolor{myorange}{#1}}
+\newcommand{\myO}{\color{myorange}}
+\newcommand{\textR}[1]{\textcolor{myred}{#1}}
+\newcommand{\myR}{\color{myred}}
+\let\G\includegraphics
+
+\titleformat{\section}{\normalfont\Large\bfseries\myB\sffamily}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries\myB\sffamily}{\thesubsection}{1em}{}

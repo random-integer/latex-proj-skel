@@ -1,0 +1,49 @@
+\ProvidesPackage{preamb-chinese}
+
+\usepackage[CJKmath=true,PunctStyle=plain]{xeCJK}
+% CJKmath=true: 在數學算式中置入CJK字元
+% PunctStyle=plain: 不更動標點符號的間距，即全部使用
+%                   Noto Sans CJK TC原有之全角標點符號
+%                   （若使用 quanjiao 設定，相鄰兩個標
+%                   點符號的寬度會被壓至1.5個漢字寬）
+% \setCJKmainfont{Noto Serif CJK TC}
+% \setCJKsansfont{Noto Sans CJK TC}
+% \setCJKmonofont{Noto Sans Mono CJK TC}
+% xdvipdfmk needs static font files, rather than the variable ones installed in the system.
+% Link to the fonts with ./link-fonts-here.
+% edit 2025-06-30: it seems like the font files installed in the system are indeed static,
+% but they somehow don't work with LaTeX.
+% \setCJKmainfont{NotoSansCJKtc}[
+% 	Extension    = .otf ,
+% 	UprightFont  = *-Regular ,
+% 	BoldFont     = *-Bold
+% ]
+% \setCJKsansfont{NotoSansCJKtc}[
+% 	Path = /home/randint/Documents/fonts-latex/ ,
+% 	Extension    = .otf ,
+% 	UprightFont  = *-Regular ,
+% 	BoldFont     = *-Bold
+% ]
+% \setCJKromanfont{NotoSerifCJKtc}[
+% 	Extension    = .otf ,
+% 	UprightFont  = *-Regular ,
+% 	BoldFont     = *-Bold
+% ]
+\setCJKsansfont{GenSekiGothicTW}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .ttf ,
+	UprightFont  = *-R-01 ,
+	BoldFont     = *-B-01
+]
+\setCJKromanfont{GenRyuMinTW}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .ttf ,
+	UprightFont  = *-R-01 ,
+	BoldFont     = *-B-01
+]
+
+\renewcommand{\contentsname}{目錄}
+\renewcommand{\abstractname}{\myB 摘要}
+\renewcommand\figurename{圖}
+\renewcommand\tablename{表}
+
