@@ -5,7 +5,7 @@
 
 \setmonofont{Inconsolata}[
 	Path = /home/randint/Documents/fonts-latex/ ,
-	Scale = 0.95 ,  % such that the size fits better with the rest of the text
+	Scale = 0.95 ,
 	Extension = .ttf ,
 	UprightFont = *-Regular ,
 	BoldFont = *-Bold
@@ -17,22 +17,25 @@
 \usepackage{enumerate}
 \usepackage{amsmath}
 % \usepackage{amssymb}
-\usepackage{siunitx}
-% \qty{1.23}{J.mol^{-1}.K^{-1}}
+\usepackage{siunitx}       % \qty{1.23}{J.mol^{-1}.K^{-1}}
 \usepackage[dvipsnames]{xcolor}
 % \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{indentfirst}
 \usepackage{setspace}
+\onehalfspacing
 % \usepackage{pdfpages}
 \usepackage{float}
 \usepackage{wrapfig}
 % \usepackage{adjustbox}
 \usepackage{subcaption}
 \usepackage[font=small,labelfont=bf,labelsep=period]{caption}
-\onehalfspacing
+
 \AtBeginDocument{\RenewCommandCopy\qty\SI}
-\usepackage{physics}
+\usepackage{physics}      % for derivatives \dd{x} \dv{x}{t}
+
+\usepackage{enumitem}
+\setlist{noitemsep}       % no vertical spacing between items
 
 \definecolor{myblue}{RGB}{38, 70, 83}
 \definecolor{myteal}{RGB}{42, 157, 143}
