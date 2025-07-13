@@ -17,7 +17,7 @@
 \usepackage{enumerate}
 \usepackage{amsmath}
 % \usepackage{amssymb}
-\usepackage{siunitx}       % \qty{1.23}{J.mol^{-1}.K^{-1}}
+\usepackage{siunitx}       % \SI{1.23}{J.mol^{-1}.K^{-1}}
 \usepackage[dvipsnames]{xcolor}
 % \usepackage{hyperref}
 \usepackage{titlesec}
@@ -31,8 +31,11 @@
 \usepackage{subcaption}
 \usepackage[font=small,labelfont=bf,labelsep=period]{caption}
 
-\AtBeginDocument{\RenewCommandCopy\qty\SI}
-\usepackage{physics}      % for derivatives \dd{x} \dv{x}{t}
+% \AtBeginDocument{\RenewCommandCopy\qty\SI}
+\usepackage{physics}
+% for derivatives \dd{x} \dv{x}{t}
+% and for \bqty{} instead of using \left( \right)
+% and for auto large braces around \sin() and \exp() etc.
 
 \usepackage{enumitem}
 \setlist{noitemsep}       % no vertical spacing between items
