@@ -4,3 +4,7 @@
 *.toc
 *.aux
 .git-old
+*.bbl
+*.bcf
+*.blg
+*.run.xml
