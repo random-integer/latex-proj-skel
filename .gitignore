@@ -8,3 +8,5 @@
 *.bcf
 *.blg
 *.run.xml
+*.pdf
+*.mlx
