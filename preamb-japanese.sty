@@ -1,18 +1,12 @@
 \ProvidesPackage{preamb-japanese}
 
-\usepackage[CJKmath=true,PunctStyle=banjiao]{xeCJK}
+% \usepackage[CJKmath=true,PunctStyle=banjiao]{xeCJK}
+\usepackage[CJKmath=true,PunctStyle=quanjiao]{xeCJK}
 % CJKmath=true: 在數學算式中置入CJK字元
 % xdvipdfmk needs static font files, rather than the variable ones installed in the system.
 % Link to the fonts with ./link-fonts-here-jp.
 % edit 2025-06-30: it seems like the font files installed in the system are indeed static,
 % but they somehow don't work with LaTeX.
-% この \setCJKmainfont は要らないかも
-% \setCJKmainfont{NotoSansCJKjp}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .otf ,
-% 	UprightFont  = *-Regular ,
-% 	BoldFont     = *-Bold
-% ]
 % \setCJKsansfont{NotoSansCJKjp}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
 % 	Extension    = .otf ,
@@ -25,24 +19,44 @@
 % 	UprightFont  = *-Regular ,
 % 	BoldFont     = *-Bold
 % ]
-\setCJKsansfont{GenSekiGothicJP}[
+
+% \setCJKsansfont{GenSekiGothicJP}[
+% 	Path = /home/randint/Documents/fonts-latex/ ,
+% 	Extension    = .ttf ,
+% 	UprightFont  = *-R-02 ,
+% 	BoldFont     = *-B-02
+% ]
+\setCJKsansfont{BIZ-UDPGothic}[
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .ttf ,
-	UprightFont  = *-R-02 ,
-	BoldFont     = *-B-02
+	UprightFont  = * ,
+	BoldFont     = *-Bold
 ]
+% \setCJKsansfont{UDShinGo}[
+% 	Path = /home/randint/Documents/fonts-latex/ ,
+% 	Extension    = .otf ,
+% 	UprightFont  = *-Regular ,
+% 	BoldFont     = *-Bold
+% ]
 \setCJKromanfont{GenRyuMinJP}[
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .ttf ,
 	UprightFont  = *-R-02 ,
 	BoldFont     = *-B-02
 ]
-\setCJKmonofont{GenSekiGothicJP}[
+% \setCJKmonofont{GenSekiGothicJP}[
+% 	Scale = 0.9499 ,
+% 	Path = /home/randint/Documents/fonts-latex/ ,
+% 	Extension    = .ttf ,
+% 	UprightFont  = *-R-02 ,
+% 	BoldFont     = *-B-02
+% ]
+\setCJKmonofont{BIZ-UDPGothic}[
 	Scale = 0.9499 ,
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .ttf ,
-	UprightFont  = *-R-02 ,
-	BoldFont     = *-B-02
+	UprightFont  = * ,
+	BoldFont     = *-Bold
 ]
 
 \renewcommand{\contentsname}{目次}
