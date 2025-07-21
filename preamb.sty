@@ -53,6 +53,8 @@
 
 % \usepackage{pxrubrica}
 
+\usepackage{listings}    % for inserting code with syntax highlighting
+
 \definecolor{myblue}{RGB}{38, 70, 83}
 \definecolor{myteal}{RGB}{42, 157, 143}
 \definecolor{myyellow}{RGB}{233, 196, 106}
@@ -78,3 +80,34 @@
 
 \titleformat{\section}{\normalfont\Large\bfseries\myB\sffamily}{\thesection}{1em}{}
 \titleformat{\subsection}{\normalfont\large\bfseries\myB\sffamily}{\thesubsection}{1em}{}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolor}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolor},
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=left,
+	numbersep=10pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=4,
+	columns=fullflexible,
+	xleftmargin=5pt,
+	frame=lr,
+	framesep=5pt,
+	framerule=0pt,
+}
+
+\lstset{style=mystyle}
