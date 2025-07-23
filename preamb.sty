@@ -77,7 +77,12 @@
 \newcommand{\myO}{\color{myorange}}
 \newcommand{\textR}[1]{\textcolor{myred}{#1}}
 \newcommand{\myR}{\color{myred}}
-\let\G\includegraphics
+
+\newenvironment{mytbox}[1]{
+	\begin{tcolorbox}[colback=myteal!6!white,colframe=myteal!75!black,title=\textsf{#1}]
+		} {
+	\end{tcolorbox}
+}
 
 \titleformat{\section}{\normalfont\Large\bfseries\myB\sffamily}{\thesection}{1em}{}
 \titleformat{\subsection}{\normalfont\large\bfseries\myB\sffamily}{\thesubsection}{1em}{}
