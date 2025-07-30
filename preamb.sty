@@ -1,19 +1,19 @@
 \ProvidesPackage{preamb}
 
 \usepackage{fontspec}
-% \usepackage{libertinus-otf}     % make sure to comment out this line when using Fira Math
-\usepackage[mathrm=sym]{unicode-math}
-\setmathfont{Fira Math}
+\usepackage{libertinus-otf}     % make sure to comment out this line when using Fira Math
+% \usepackage[mathrm=sym]{unicode-math}
+% \setmathfont{Fira Math}
 
-\setsansfont{Lato}
-% \setsansfont{Noto Sans}[    % Use this with UD新ゴ and BIZ-UDPGothic
-% 	BoldFont = * SemiBold
-% ]
-\renewcommand{\familydefault}{\sfdefault}
+% \setsansfont{Lato}
+\setsansfont{Noto Sans}[    % Use this with UD新ゴ and BIZ-UDPGothic
+	BoldFont = * Bold
+]
+% \renewcommand{\familydefault}{\sfdefault}
 
 \setmonofont{Inconsolata}[
 	Path = /home/randint/Documents/fonts-latex/ ,
-	Scale = 0.95 ,          % comment out this line when in use with Noto Sans
+	Scale = 0.95 ,          % comment out this line when in use with Noto Sans as the main font
 	Extension = .ttf ,
 	UprightFont = *-Regular ,
 	BoldFont = *-Bold
