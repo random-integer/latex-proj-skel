@@ -4,58 +4,64 @@
 % \usepackage[CJKmath=true,PunctStyle=quanjiao]{xeCJK}
 % CJKmath=true: 在數學算式中置入CJK字元
 % xdvipdfmk needs static font files, rather than the variable ones installed in the system.
-% Link to the fonts with ./link-fonts-here-jp.
 % edit 2025-06-30: it seems like the font files installed in the system are indeed static,
 % but they somehow don't work with LaTeX.
-% \setCJKsansfont{NotoSansCJKjp}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .otf ,
-% 	UprightFont  = *-Regular ,
-% 	BoldFont     = *-Bold
-% ]
-% \setCJKromanfont{NotoSerifCJKjp}[
-% 	Scale = 0.97 ,
-% 	Extension    = .otf ,
-% 	UprightFont  = *-Regular ,
-% 	BoldFont     = *-Bold
-% ]
+% edit 2025-07-30: I think that it actually does work with variable fonts? but things are
+% sometimes a bit wacky so I still use these absolute paths to fonts.
 
-\newCJKfontfamily[genseki]\genseki{GenSekiGothicJP}[
+% usage: {\genseki 文字一二三}
+\newCJKfontfamily\genseki{GenSekiGothicJP}[
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .ttf ,
 	UprightFont  = *-Regular ,
 	BoldFont     = *-Bold ,
 ]
-\newCJKfontfamily[udpgoth]\udpgoth{BIZ-UDPGothic}[
+\newCJKfontfamily\udpgoth{BIZ-UDPGothic}[
 	% with this font change PunctStyle to quanjiao!
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .ttf ,
 	UprightFont  = * ,
 	BoldFont     = *-Bold ,
 ]
-\newCJKfontfamily[udshingo]\udshingo{UDShinGo}[
+\newCJKfontfamily\udshingo{UDShinGo}[
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .otf ,
 	UprightFont  = *-Regular ,
 	BoldFont     = *-DeBold ,
 ]
-\newCJKfontfamily[udshingolight]\udshingolight{UDShinGoLight}[
+\newCJKfontfamily\udshingolight{UDShinGoLight}[
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .otf ,
 	UprightFont  = UDShinGo-Light ,
 	BoldFont     = UDShinGo-Medium ,
 ]
-\newCJKfontfamily[genryumin]\genryumin{GenRyuMinJP}[
+\newCJKfontfamily\udshingoheavy{UDShinGoHeavy}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .otf ,
+	UprightFont  = UDShinGo-Medium ,
+	BoldFont     = UDShinGo-Bold ,
+]
+\newCJKfontfamily\genryumin{GenRyuMinJP}[
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .ttf ,
 	UprightFont  = *-Regular ,
 	BoldFont     = *-Bold ,
 ]
-\newCJKfontfamily[gothshingo]\gothshingo{Gothshingo}[
+\newCJKfontfamily\gothshingo{Gothshingo}[
 	Path = /home/randint/Documents/fonts-latex/ ,
 	UprightFont  = BIZ-UDPGothic.ttf ,
 	BoldFont     = UDShinGo-DeBold.otf ,
 ]
+% \newCJKfontfamily\kyokasho{UD Digi Kyokasho NK-R}[
+% 	BoldFont = UD Digi Kyokasho NK-B ,
+% ]
+\newCJKfontfamily\kyokasho{UDDigiKyokashoNK}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .ttf ,
+	UprightFont  = *-Regular ,
+	BoldFont     = *-Bold ,
+]
+\newCJKfontfamily\mspgothic{MS PGothic}
 
 % \setCJKsansfont{GenSekiGothicJP}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
@@ -76,11 +82,6 @@
 % 	UprightFont  = *-Regular ,
 % 	BoldFont     = *-DeBold ,
 % ]
-
-% \setCJKsansfont{\gothshingo}
-% \setCJKromanfont{genryumin}
-% \setCJKmonofont{BIZ-UDPGothic}[Scale=0.9499]
-
 \setCJKsansfont{UDPGothicUDShinGo}[
 	Path = /home/randint/Documents/fonts-latex/ ,
 	UprightFont  = BIZ-UDPGothic.ttf ,
@@ -97,7 +98,7 @@
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .ttf ,
 	UprightFont  = * ,
-	BoldFont     = *-Bold
+	BoldFont     = *-Bold ,
 ]
 
 \renewcommand{\contentsname}{目次}
