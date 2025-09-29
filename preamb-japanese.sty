@@ -1,6 +1,7 @@
 \ProvidesPackage{preamb-japanese}
 
-\usepackage[CJKmath=true,PunctStyle=banjiao]{xeCJK}
+% \usepackage[CJKmath=true,PunctStyle=banjiao]{xeCJK}
+\usepackage[CJKmath=true,PunctStyle=plain]{xeCJK}
 % \usepackage[CJKmath=true,PunctStyle=quanjiao]{xeCJK}
 % CJKmath=true: 在數學算式中置入CJK字元
 % xdvipdfmk needs static font files, rather than the variable ones installed in the system.
@@ -52,9 +53,6 @@
 	UprightFont  = BIZ-UDPGothic.ttf ,
 	BoldFont     = UDShinGo-DeBold.otf ,
 ]
-% \newCJKfontfamily\kyokasho{UD Digi Kyokasho NK-R}[
-% 	BoldFont = UD Digi Kyokasho NK-B ,
-% ]
 \newCJKfontfamily\kyokasho{UDDigiKyokashoNK}[
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .ttf ,
@@ -89,10 +87,17 @@
 % 	UprightFont  = *-Regular ,
 % 	BoldFont     = *-DeBold ,
 % ]
-\setCJKsansfont{UDPGothicUDShinGo}[
-	Path = /home/randint/Documents/fonts-latex/ ,
-	UprightFont  = BIZ-UDPGothic.ttf ,
-	BoldFont     = UDShinGo-DeBold.otf ,
+% \setCJKsansfont{UDPGothicUDShinGo}[
+% 	Path = /home/randint/Documents/fonts-latex/ ,
+% 	UprightFont  = BIZ-UDPGothic.ttf ,
+% 	BoldFont     = UDShinGo-DeBold.otf ,
+% ]
+\setCJKsansfont{Hiragino Sans}[
+	% Does not work well with ， (逗號).
+	% None of the PunctStyle in xeCJK make them look good.
+	% Use only with 、 (頓號；読点) and 。 (句號；句点).
+	RegularFont = * W3 ,
+	BoldFont = * W6 ,
 ]
 \setCJKromanfont{GenRyuMinJP}[
 	Path = /home/randint/Documents/fonts-latex/ ,
