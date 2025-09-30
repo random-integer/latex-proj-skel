@@ -1,7 +1,8 @@
 \ProvidesPackage{preamb-japanese}
 
-\usepackage[CJKmath=true,PunctStyle=banjiao]{xeCJK}
+% \usepackage[CJKmath=true,PunctStyle=banjiao]{xeCJK}
 % \usepackage[CJKmath=true,PunctStyle=quanjiao]{xeCJK}
+\usepackage[CJKmath=true,PunctStyle=plain]{xeCJK}
 % CJKmath=true: 在數學算式中置入CJK字元
 % xdvipdfmk needs static font files, rather than the variable ones installed in the system.
 % edit 2025-06-30: it seems like the font files installed in the system are indeed static,
@@ -104,11 +105,12 @@
 % 	UprightFont  = *-Regular ,
 % 	BoldFont     = *-Bold ,
 % ]
-\setCJKromanfont{BIZUDPMinchoGenRyu}[
+\setCJKromanfont{BIZUDMincho}[
+	% PunctStyle quanjiao!
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .ttf ,
-	UprightFont  = BIZ-UDPMincho-Medium ,
-	BoldFont     = GenRyuMinJP-Bold ,
+	UprightFont  = *-Regular ,
+	BoldFont     = *-Bold ,
 ]
 \setCJKmonofont{BIZ-UDPGothic}[
 	Scale = 0.9499 ,
