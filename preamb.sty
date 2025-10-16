@@ -8,17 +8,17 @@
 % \setsansfont{Lato}[
 % 	BoldFont = Lato Heavy ,
 % ]
-\setsansfont{Noto Sans}[    % use this with UD新ゴ and BIZ-UDPGothic
-	BoldFont = * Bold ,
-]
-% \setsansfont{SF-Pro-Text}[     % use this with ヒラギノ角ゴ
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension = .otf ,
-% 	UprightFont = *-Regular ,
-% 	ItalicFont = *-RegularItalic ,
-% 	BoldFont = *-Bold ,
-% 	BoldItalicFont = *-BoldItalic ,
+% \setsansfont{Noto Sans}[    % use this with UD新ゴ and BIZ-UDPGothic
+% 	BoldFont = * Bold ,
 % ]
+\setsansfont{SF-Pro-Text}[     % use this with ヒラギノ角ゴ
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension = .otf ,
+	UprightFont = *-Regular ,
+	ItalicFont = *-RegularItalic ,
+	BoldFont = *-Bold ,
+	BoldItalicFont = *-BoldItalic ,
+]
 % \renewcommand{\familydefault}{\sfdefault}
 
 \setmonofont{Inconsolata}[
@@ -56,7 +56,7 @@
 % and for \pqty{} instead of using \left( \right)
 % and for auto large braces around \sin() and \exp() etc.
 
-\usepackage[backend=biber, style=ieee]{biblatex}
+\usepackage[backend=biber, style=numeric]{biblatex}
 \addbibresource{citations.bib}
 
 \usepackage{enumitem}
