@@ -13,20 +13,30 @@
 % ]
 \setsansfont{SF-Pro-Text}[     % use this with ヒラギノ角ゴ
 	Path = /home/randint/Documents/fonts-latex/ ,
+	Scale = 0.95 ,
 	Extension = .otf ,
 	UprightFont = *-Regular ,
 	ItalicFont = *-RegularItalic ,
 	BoldFont = *-Bold ,
 	BoldItalicFont = *-BoldItalic ,
 ]
-% \renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{\sfdefault}
 
-\setmonofont{Inconsolata}[
+% \setmonofont{Inconsolata}[
+% 	Path = /home/randint/Documents/fonts-latex/ ,
+% 	Scale = 0.95 ,          % comment out this line when in use with Noto Sans as the main font
+% 	Extension = .ttf ,
+% 	UprightFont = *-Regular ,
+% 	BoldFont = *-Bold ,
+% ]
+\setmonofont{GoogleSansCode}[
 	Path = /home/randint/Documents/fonts-latex/ ,
-	Scale = 0.95 ,          % comment out this line when in use with Noto Sans as the main font
+	Scale = 0.83 ,
 	Extension = .ttf ,
 	UprightFont = *-Regular ,
+	ItalicFont = *-Italic ,
 	BoldFont = *-Bold ,
+	BoldItalicFont = *-BoldItalic ,
 ]
 
 \usepackage[margin = 2cm]{geometry}
@@ -55,6 +65,15 @@
 % for derivatives \dd{x} \dv{x}{t}
 % and for \pqty{} instead of using \left( \right)
 % and for auto large braces around \sin() and \exp() etc.
+
+% \usepackage[siunitx, europeanresistors, RPvoltages]{circuitikz}
+% \usepackage{showexpl}
+% usage:
+% \begin{LTXexample}[width=0.2\textwidth]
+% \begin{circuitikz}[]
+%     \draw (0,0) to[isource] (0,3) -- (2,3)   % 電流源と上の導線
+%     to[R] (2,0) -- (0,0);                    % 抵抗と下の導線
+% \end{circuitikz}
 
 \usepackage[backend=biber, style=numeric]{biblatex}
 \addbibresource{citations.bib}
