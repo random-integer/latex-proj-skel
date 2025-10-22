@@ -11,16 +11,16 @@
 % \setsansfont{Noto Sans}[    % use this with UD新ゴ and BIZ-UDPGothic
 % 	BoldFont = * Bold ,
 % ]
-\setsansfont{SF-Pro-Text}[     % use this with ヒラギノ角ゴ
-	Path = /home/randint/Documents/fonts-latex/ ,
-	Scale = 0.95 ,
-	Extension = .otf ,
-	UprightFont = *-Regular ,
-	ItalicFont = *-RegularItalic ,
-	BoldFont = *-Bold ,
-	BoldItalicFont = *-BoldItalic ,
-]
-\renewcommand{\familydefault}{\sfdefault}
+% \setsansfont{SF-Pro-Text}[     % use this with ヒラギノ角ゴ
+% 	Path = /home/randint/Documents/fonts-latex/ ,
+% 	Scale = 0.95 ,
+% 	Extension = .otf ,
+% 	UprightFont = *-Regular ,
+% 	ItalicFont = *-RegularItalic ,
+% 	BoldFont = *-Bold ,
+% 	BoldItalicFont = *-BoldItalic ,
+% ]
+% \renewcommand{\familydefault}{\sfdefault}
 
 % \setmonofont{Inconsolata}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
@@ -81,8 +81,6 @@
 \usepackage{enumitem}
 \setlist{noitemsep}       % no vertical spacing between items
 
-% \usepackage{pxrubrica}
-
 \usepackage{listings}    % for inserting code with syntax highlighting
 
 \definecolor{myblue}{RGB}{38, 70, 83}
@@ -115,13 +113,14 @@
 
 \newenvironment{mybbox}[1]{
 	\begin{tcolorbox}[colback=myblue!6!white,colframe=white!10!myblue,title=\textsf{#1}]
-		\kai\footnotesize
+		% \kai\footnotesize
+		\footnotesize
 		} {
 	\end{tcolorbox}
 }
 
-\titleformat{\section}{\normalfont\Large\bfseries\myB\sffamily}{\thesection}{1em}{}
-\titleformat{\subsection}{\normalfont\large\bfseries\myB\sffamily}{\thesubsection}{1em}{}
+% \titleformat{\section}{\normalfont\Large\bfseries\myB\sffamily}{\thesection}{1em}{}
+% \titleformat{\subsection}{\normalfont\large\bfseries\myB\sffamily}{\thesubsection}{1em}{}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
