@@ -3,69 +3,68 @@
 \usepackage{luatexja}
 \usepackage{luatexja-fontspec}
 
-% % usage: {\genseki 文字一二三}
-% \newCJKfontfamily\genseki{GenSekiGothicJP}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .ttf ,
-% 	UprightFont  = *-Regular ,
-% 	BoldFont     = *-Bold ,
-% ]
-% \newCJKfontfamily\udpgoth{BIZ-UDPGothic}[
-% 	% with this font change PunctStyle to quanjiao!
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .ttf ,
-% 	UprightFont  = * ,
-% 	BoldFont     = *-Bold ,
-% ]
-% % Note: it turns out that the following font is actually 新ゴ and not UD新ゴ, but whatever
-% \newCJKfontfamily\udshingo{UDShinGo}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .otf ,
-% 	UprightFont  = *-Regular ,
-% 	BoldFont     = *-DeBold ,
-% ]
-% \newCJKfontfamily\udshingolight{UDShinGoLight}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .otf ,
-% 	UprightFont  = UDShinGo-Light ,
-% 	BoldFont     = UDShinGo-Medium ,
-% ]
-% \newCJKfontfamily\udshingoheavy{UDShinGoHeavy}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .otf ,
-% 	UprightFont  = UDShinGo-Medium ,
-% 	BoldFont     = UDShinGo-Bold ,
-% ]
-% \newCJKfontfamily\genryumin{GenRyuMinJP}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .ttf ,
-% 	UprightFont  = *-Regular ,
-% 	BoldFont     = *-Bold ,
-% ]
-% \newCJKfontfamily\gothshingo{Gothshingo}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	UprightFont  = BIZ-UDPGothic.ttf ,
-% 	BoldFont     = UDShinGo-DeBold.otf ,
-% ]
-% \newCJKfontfamily\kyokasho{UDDigiKyokashoNK}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .ttf ,
-% 	UprightFont  = *-Regular ,
-% 	BoldFont     = *-Bold ,
-% ]
-% \newCJKfontfamily\kai{LXGWWenKai}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension = .ttf ,
-% 	% UprightFont = *-Light ,
-% 	UprightFont = *-Regular ,
-% 	BoldFont = *-Bold ,
-% ]
-% \newCJKfontfamily\notosans{NotoSansCJKjp}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .otf ,
-% 	UprightFont  = *-Regular ,
-% 	BoldFont     = *-Bold ,
-% ]
+% usage: {\genseki 文字一二三}
+\newjfontfamily\genseki{GenSekiGothicJP}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .ttf ,
+	UprightFont  = *-Regular ,
+	BoldFont     = *-Bold ,
+]
+\newjfontfamily\udpgoth{BIZ-UDPGothic}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .ttf ,
+	UprightFont  = * ,
+	BoldFont     = *-Bold ,
+]
+% Note: it turns out that the following font is actually 新ゴ and not UD新ゴ, but whatever
+\newjfontfamily\udshingo{UDShinGo}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .otf ,
+	UprightFont  = *-Regular ,
+	BoldFont     = *-DeBold ,
+]
+\newjfontfamily\udshingolight{UDShinGoLight}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .otf ,
+	UprightFont  = UDShinGo-Light ,
+	BoldFont     = UDShinGo-Medium ,
+]
+\newjfontfamily\udshingoheavy{UDShinGoHeavy}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .otf ,
+	UprightFont  = UDShinGo-Medium ,
+	BoldFont     = UDShinGo-Bold ,
+]
+\newjfontfamily\genryumin{GenRyuMinJP}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .ttf ,
+	UprightFont  = *-Regular ,
+	BoldFont     = *-Bold ,
+]
+\newjfontfamily\gothshingo{Gothshingo}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	UprightFont  = BIZ-UDPGothic.ttf ,
+	BoldFont     = UDShinGo-DeBold.otf ,
+]
+\newjfontfamily\kyokasho{UDDigiKyokashoNK}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .ttf ,
+	UprightFont  = *-Regular ,
+	BoldFont     = *-Bold ,
+]
+\newjfontfamily\kai{LXGWWenKai}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension = .ttf ,
+	% UprightFont = *-Light ,
+	UprightFont = *-Regular ,
+	BoldFont = *-Bold ,
+]
+\newjfontfamily\notosans{NotoSansCJKjp}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .otf ,
+	UprightFont  = *-Regular ,
+	BoldFont     = *-Bold ,
+]
 
 % \setsansjfont{GenSekiGothicJP}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
@@ -130,16 +129,16 @@
 ]
 
 \setmonojfont{BIZ-UDPGothic}[
-	Scale = 0.9499 ,
 	Path = /home/randint/Documents/fonts-latex/ ,
 	Extension    = .ttf ,
 	UprightFont  = * ,
 	BoldFont     = *-Bold ,
+	Scale = 0.9499 ,
 ]
 
 % \renewcommand{\contentsname}{目次}
 % \renewcommand{\abstractname}{\myB\sffamily 要旨}
 % \renewcommand\figurename{図}
 % \renewcommand\tablename{表}
-%
+
 % \DeclareTextFontCommand{\myemph}{\bfseries\sffamily\notosans}
