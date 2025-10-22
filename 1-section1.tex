@@ -6,17 +6,15 @@ RLC回路は、抵抗 (resistor)、コイル (inductor)、コンデンサ (capac
 
 The quick brown fox jumps over the lazy dog.
 
-データの符号化
-\begin{enumerate}
-	\item （漢字モードの場合）まずQRコードに入れる文字列データをシフトJISのバイト列に変換し，続いてQRコード用のビット列(13ビット長)に変換する．
-	\item ヘッダ情報(モード指示子・文字数データ)に続いて，13桁のビット列を並べる．
-	\item 並べ終わったら，最後に「終端パターン」と「埋め草ビット」を並べる．
-	\item シンボルのデータコード語の容量いっぱいになるまで，「埋め草コード語」を埋めていく．
-	\item 並べたビット列を8ビット(=1バイト)ずつに区切って，符号化は完了．
-\end{enumerate}
-
 微分方程式とは、ある関数とその導関数を含む方程式のことです。
 例えば、\(x\) の関数 \(y\) とその導関数 \(\dv{y}{x}\)を含んだ式は微分方程式といえます。
-この方程式を満たす「関数 \(y\)」がこの方程式の解であり、これを求めることを「\textbf{微分方程式を解く}」といいます。
+この方程式を満たす「関数 \(y\)」がこの方程式の解であり、これを求めることを「\emph{微分方程式を解く}」といいます。
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{colors.png}
+	\caption{色々な色}
+	\label{fig:colors}
+\end{figure}
 
 citation \cite{sizesuu}
