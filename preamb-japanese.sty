@@ -1,15 +1,7 @@
 \ProvidesPackage{preamb-japanese}
 
 \usepackage{luatexja}
-
-% \usepackage[CJKmath=true,PunctStyle=quanjiao]{xeCJK}
-% \usepackage[CJKmath=true,PunctStyle=plain]{xeCJK}
-% CJKmath=true: 在數學算式中置入CJK字元
-% xdvipdfmk needs static font files, rather than the variable ones installed in the system.
-% edit 2025-06-30: it seems like the font files installed in the system are indeed static,
-% but they somehow don't work with LaTeX.
-% edit 2025-07-30: I think that it actually does work with variable fonts? but things are
-% sometimes a bit wacky so I still use these absolute paths to fonts.
+\usepackage{luatexja-fontspec}
 
 % % usage: {\genseki 文字一二三}
 % \newCJKfontfamily\genseki{GenSekiGothicJP}[
@@ -75,74 +67,76 @@
 % 	BoldFont     = *-Bold ,
 % ]
 
-% \setCJKsansfont{GenSekiGothicJP}[
+% \setsansjfont{GenSekiGothicJP}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
 % 	Extension    = .ttf ,
 % 	UprightFont  = *-Regular ,
 % 	BoldFont     = *-Bold ,
 % ]
-% \setCJKsansfont{NotoSansCJKjp}[
+% \setsansjfont{NotoSansCJKjp}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
 % 	Extension    = .otf ,
 % 	UprightFont  = *-Regular ,
 % 	BoldFont     = *-Bold ,
 % ]
-% \setCJKsansfont{BIZ-UDPGothic}[
+% \setsansjfont{BIZ-UDPGothic}[
 % 	% with this font change PunctStyle to quanjiao!
 % 	Path = /home/randint/Documents/fonts-latex/ ,
 % 	Extension    = .ttf ,
 % 	UprightFont  = * ,
 % 	BoldFont     = *-Bold ,
 % ]
-% \setCJKsansfont{UDShinGo}[
+% Note: it turns out that the following font is actually 新ゴ and not UD新ゴ, but whatever
+% \setsansjfont{UDShinGo}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
 % 	Extension    = .otf ,
 % 	UprightFont  = *-Regular ,
 % 	BoldFont     = *-DeBold ,
 % ]
-% \setCJKsansfont{UDPGothicUDShinGo}[
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	UprightFont  = BIZ-UDPGothic.ttf ,
-% 	BoldFont     = UDShinGo-DeBold.otf ,
-% ]
-% \setCJKsansfont{HiraginoKakuGothic}[
+\setsansjfont{UDPGothicUDShinGo}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	UprightFont  = BIZ-UDPGothic.ttf ,
+	BoldFont     = UDShinGo-DeBold.otf ,
+]
+% \setsansjfont{HiraginoKakuGothic}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
 % 	Extension    = .otf ,
 % 	UprightFont  = *-W3 ,
 % 	BoldFont     = *-W6 ,
 % ]
-% \setCJKromanfont{GenRyuMinJP}[
+% \setmainjfont{GenRyuMinJP}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
 % 	Extension    = .ttf ,
 % 	UprightFont  = *-Regular ,
 % 	BoldFont     = *-Bold ,
 % ]
-% \setCJKromanfont{NotoSerifCJKjp}[
+% \setmainjfont{NotoSerifCJKjp}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
 % 	Extension    = .otf ,
 % 	UprightFont  = *-Regular ,
 % 	BoldFont     = *-Bold ,
 % ]
-% \setCJKromanfont{BIZUDMincho}[
-% 	% PunctStyle quanjiao!
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .ttf ,
-% 	UprightFont  = *-Regular ,
-% 	BoldFont     = *-Bold ,
-% ]
-% \setCJKromanfont{hiragino-mincho-pro}[
+\setmainjfont{BIZUDMincho}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .ttf ,
+	UprightFont  = *-Regular ,
+	BoldFont     = *-Bold ,
+]
+% \setmainjfont{hiragino-mincho-pro}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
 % 	Extension = .otf ,
 % 	UprightFont = *-w3 ,
 % 	BoldFont = *-w6 ,
 % ]
-% \setCJKmonofont{BIZ-UDPGothic}[
-% 	Scale = 0.9499 ,
-% 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Extension    = .ttf ,
-% 	UprightFont  = * ,
-% 	BoldFont     = *-Bold ,
-% ]
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+
+\setmonojfont{BIZ-UDPGothic}[
+	Scale = 0.9499 ,
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .ttf ,
+	UprightFont  = * ,
+	BoldFont     = *-Bold ,
+]
 
 % \renewcommand{\contentsname}{目次}
 % \renewcommand{\abstractname}{\myB\sffamily 要旨}
