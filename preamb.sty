@@ -54,7 +54,22 @@
 \usepackage{subcaption}
 \usepackage[font=small]{caption}
 
+\usepackage{minted}
+\setminted{
+    style=default,
+    % baselinestretch=1.0,
+    fontsize=\small,
+    linenos,
+    autogobble,
+    numbersep=2.75mm,
+}
+
+% Change styling of the numbering in minted
+\renewcommand{\theFancyVerbLine}{\ttfamily{\scriptsize\arabic{FancyVerbLine}}}
+
 \usepackage{tcolorbox}
+\tcbuselibrary{minted}
+\tcbuselibrary{skins}
 
 \usepackage{physics}
 % for derivatives \dd{x} \dv{x}{t}
@@ -75,8 +90,6 @@
 
 \usepackage{enumitem}
 \setlist{noitemsep}       % no vertical spacing between items
-
-\usepackage{listings}    % for inserting code with syntax highlighting
 
 \definecolor{myblue}{RGB}{38, 70, 83}
 \definecolor{myteal}{RGB}{42, 157, 143}
@@ -109,36 +122,3 @@
 	\end{tcolorbox}
 }
 
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolor}{rgb}{0.95,0.95,0.92}
-
-\lstdefinestyle{mystyle}{
-	backgroundcolor=\color{backcolor},
-	commentstyle=\color{codegreen},
-	keywordstyle=\color{magenta},
-	numberstyle=\tiny\color{codegray},
-	stringstyle=\color{codepurple},
-	basicstyle=\ttfamily\small,
-	breakatwhitespace=false,
-	breaklines=true,
-	captionpos=b,
-	keepspaces=true,
-	numbers=left,
-	numbersep=10pt,
-	showspaces=false,
-	showstringspaces=false,
-	showtabs=false,
-	tabsize=4,
-	columns=fullflexible,
-	xleftmargin=5pt,
-	frame=lr,
-	framesep=5pt,
-	framerule=0pt,
-}
-
-\lstset{style=mystyle}
-
-% Usage: Lorem ipsum dolor ~print("Hello world")~ aaea wie wt dolor sit amet.
-\lstMakeShortInline[basicstyle=\ttfamily]~
