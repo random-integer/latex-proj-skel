@@ -13,18 +13,18 @@
 % ]
 \setsansfont{SF-Pro-Text}[     % use this with ヒラギノ角ゴ
 	Path = /home/randint/Documents/fonts-latex/ ,
-	Scale = 0.95 ,
 	Extension = .otf ,
 	UprightFont = *-Regular ,
 	ItalicFont = *-RegularItalic ,
 	BoldFont = *-Bold ,
 	BoldItalicFont = *-BoldItalic ,
 ]
-\renewcommand{\familydefault}{\sfdefault}
+% \renewcommand{\familydefault}{\sfdefault}
+% \renewcommand{\kanjifamilydefault}{\gtdefault}
 
 % \setmonofont{Inconsolata}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
-% 	Scale = 0.95 ,          % comment out this line when in use with Noto Sans as the main font
+% 	Scale = 0.95 ,
 % 	Extension = .ttf ,
 % 	UprightFont = *-Regular ,
 % 	BoldFont = *-Bold ,
@@ -39,8 +39,6 @@
 	BoldItalicFont = *-BoldItalic ,
 ]
 
-\usepackage[margin = 2cm]{geometry}
-% \usepackage{moresize}
 \usepackage{graphicx}
 \usepackage{enumerate}
 \usepackage{amsmath}
@@ -48,10 +46,7 @@
 \usepackage{siunitx}       % \SI{1.23}{J.mol^{-1}.K^{-1}}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{hyperref}
-\usepackage{titlesec}
 \usepackage{indentfirst}
-\usepackage{setspace}
-\onehalfspacing
 % \usepackage{pdfpages}
 \usepackage{float}
 \usepackage{wrapfig}
@@ -59,7 +54,22 @@
 \usepackage{subcaption}
 \usepackage[font=small]{caption}
 
+\usepackage{minted}
+\setminted{
+    style=default,
+    % baselinestretch=1.0,
+    fontsize=\small,
+    linenos,
+    autogobble,
+    numbersep=2.75mm,
+}
+
+% Change styling of the numbering in minted
+\renewcommand{\theFancyVerbLine}{\ttfamily{\scriptsize\arabic{FancyVerbLine}}}
+
 \usepackage{tcolorbox}
+\tcbuselibrary{minted}
+\tcbuselibrary{skins}
 
 \usepackage{physics}
 % for derivatives \dd{x} \dv{x}{t}
@@ -81,21 +91,13 @@
 \usepackage{enumitem}
 \setlist{noitemsep}       % no vertical spacing between items
 
-% \usepackage{pxrubrica}
-
-\usepackage{listings}    % for inserting code with syntax highlighting
-
 \definecolor{myblue}{RGB}{38, 70, 83}
 \definecolor{myteal}{RGB}{42, 157, 143}
 \definecolor{myyellow}{RGB}{233, 196, 106}
 \definecolor{myorange}{RGB}{244, 162, 97}
 \definecolor{myred}{RGB}{231, 11, 81}
 
-% 用法：\textmycolorA{字} 或 {\mycolorA 文字}
-% \newcommand{\textmycolorA}[1]{\textcolor{WildStrawberry}{#1}}
-% \newcommand{\mycolorA}{\color{WildStrawberry}}
-% \newcommand{\textmycolorB}[1]{\textcolor{PineGreen}{#1}}
-% \newcommand{\mycolorB}{\color{PineGreen}}
+% 用法：\textB{字} 或 {\myB 文字}
 \newcommand{\textB}[1]{\textcolor{myblue}{#1}}
 \newcommand{\myB}{\color{myblue}}
 \newcommand{\textT}[1]{\textcolor{myteal}{#1}}
@@ -120,39 +122,3 @@
 	\end{tcolorbox}
 }
 
-\titleformat{\section}{\normalfont\Large\bfseries\myB\sffamily}{\thesection}{1em}{}
-\titleformat{\subsection}{\normalfont\large\bfseries\myB\sffamily}{\thesubsection}{1em}{}
-
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolor}{rgb}{0.95,0.95,0.92}
-
-\lstdefinestyle{mystyle}{
-	backgroundcolor=\color{backcolor},
-	commentstyle=\color{codegreen},
-	keywordstyle=\color{magenta},
-	numberstyle=\tiny\color{codegray},
-	stringstyle=\color{codepurple},
-	basicstyle=\ttfamily\small,
-	breakatwhitespace=false,
-	breaklines=true,
-	captionpos=b,
-	keepspaces=true,
-	numbers=left,
-	numbersep=10pt,
-	showspaces=false,
-	showstringspaces=false,
-	showtabs=false,
-	tabsize=4,
-	columns=fullflexible,
-	xleftmargin=5pt,
-	frame=lr,
-	framesep=5pt,
-	framerule=0pt,
-}
-
-\lstset{style=mystyle}
-
-% Usage: Lorem ipsum dolor ~print("Hello world")~ aaea wie wt dolor sit amet.
-\lstMakeShortInline[basicstyle=\ttfamily]~

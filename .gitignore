@@ -11,3 +11,8 @@
 *.pdf
 *.mlx
 *.out
+*.nav
+*.snm
+*.vrb
+_minted/*
+*.listing
