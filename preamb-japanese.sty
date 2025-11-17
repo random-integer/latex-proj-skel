@@ -65,6 +65,18 @@
 	UprightFont  = *-Regular ,
 	BoldFont     = *-Bold ,
 ]
+\newjfontfamily\kleeone{KleeOne}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .ttf ,
+	UprightFont  = *-Regular ,
+	BoldFont     = *-SemiBold ,
+]
+\newjfontfamily\kleeonethic{KleeOne}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Extension    = .ttf ,
+	UprightFont  = *-SemiBold ,
+	BoldFont     = *-SemiBold ,
+]
 
 % \setsansjfont{GenSekiGothicJP}[
 % 	Path = /home/randint/Documents/fonts-latex/ ,
@@ -146,3 +158,5 @@
 	Scale = 0.9499 ,
 ]
 
+\usepackage{footmisc}
+\renewcommand{\footnotelayout}{\footnotesize\kleeonethic}
