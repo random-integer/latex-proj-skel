@@ -49,7 +49,15 @@
 % \usepackage{amssymb}
 \usepackage{siunitx}       % \SI{1.23}{J.mol^{-1}.K^{-1}}
 \usepackage[dvipsnames]{xcolor}
+
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={myred!70!black},
+    citecolor={myteal!60!black},
+    urlcolor={myteal!40!black}
+}
+
 \usepackage{indentfirst}
 % \usepackage{pdfpages}
 \usepackage{float}
@@ -126,4 +134,8 @@
 		} {
 	\end{tcolorbox}
 }
+
+% \usepackage{titlesec}
+% \titleformat{\section}{\normalfont\Large\bfseries\myB\sffamily}{\thesection}{1em}{}
+% \titleformat{\subsection}{\normalfont\large\bfseries\myB\sffamily}{\thesubsection}{1em}{}
 
