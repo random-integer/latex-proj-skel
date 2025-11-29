@@ -64,14 +64,6 @@
 \usepackage{enumitem}
 \setlist{noitemsep}       % no vertical spacing between items
 
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks,
-    linkcolor={myred!70!black},
-    citecolor={myteal!60!black},
-    urlcolor={myteal!40!black}
-}
-
 \usepackage{minted}
 \setminted{
     style=default,
@@ -103,6 +95,18 @@
 \definecolor{myyellow}{RGB}{233, 196, 106}
 \definecolor{myorange}{RGB}{244, 162, 97}
 \definecolor{myred}{RGB}{231, 11, 81}
+
+\usepackage{hyperref}
+\hypersetup{
+    % colorlinks,
+    % linkcolor={myred!70!black},
+    % citecolor={myteal!60!black},
+    % urlcolor={myteal!40!black},
+    linkbordercolor={myred!70!white},
+    citebordercolor={myteal!60!white},
+    urlbordercolor={myteal!60!white},
+}
+
 
 % 用法：\textB{字} 或 {\myB 文字}
 \newcommand{\textB}[1]{\textcolor{myblue}{#1}}
