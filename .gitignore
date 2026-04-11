@@ -15,4 +15,5 @@
 *.snm
 *.vrb
 _minted/*
+_minted-main/*
 *.listing
