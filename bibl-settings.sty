@@ -14,6 +14,9 @@
     defernumbers=true,           % 文献番号の割り当てを遅延させる
     labelnumber=true]{biblatex}  % 文献ラベルに番号を使用
 
+\usepackage{hyperref}     % needs to be loaded after biblatex but before the custom \jpcite commands
+
+
 % 日本語文献と非日本語文献を分けるためのフィルター定義
 \defbibcheck{japanese}{%      % 日本語文献のみを表示するフィルター
   \iffieldequalstr{langid}{japanese}
@@ -192,7 +195,8 @@
 
 % 括弧書きの引用（〜である（田中，2018））のコマンド
 \newcommand{\jpcite}[1]{%
-  （\citeauthor{#1}，\citeyear{#1}）%
+  % （\citeauthor{#1}，\citeyear{#1}）%
+  （\hyperlink{cite.#1}{\citeauthor{#1}，\citeyear{#1}}）%
 }
 
 % 複数文献の括弧書き引用のコマンド

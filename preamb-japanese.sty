@@ -174,3 +174,7 @@
 \renewcommand{\footnotelayout}{\footnotesize\kleeonethic}
 
 \usepackage{bibl-settings}
+%% ^ this includes \usepackage{hyperref}!!!
+%% because hyperref needs to be loaded after biblatex
+%% but also before the custom citation commands.
+%% this is also why I had to separate the \usepackage{hyperref} into japanese and english.
