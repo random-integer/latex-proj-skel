@@ -103,6 +103,17 @@
 \definecolor{myorange}{RGB}{244, 162, 97}
 \definecolor{myred}{RGB}{231, 11, 81}
 
+\usepackage{hyperref}
+\hypersetup{
+    % colorlinks,
+    % linkcolor={myred!70!black},
+    % citecolor={myteal!60!black},
+    % urlcolor={myteal!40!black},
+    linkbordercolor={myred!70!white},
+    citebordercolor={myteal!60!white},
+    urlbordercolor={myteal!60!white},
+}
+
 
 % 用法：\textB{字} 或 {\myB 文字}
 \newcommand{\textB}[1]{\textcolor{myblue}{#1}}
@@ -133,11 +144,3 @@
 \titleformat{\section}{\normalfont\Large\bfseries\myB\sffamily}{\thesection}{1em}{}
 \titleformat{\subsection}{\normalfont\large\bfseries\myB\sffamily}{\thesubsection}{1em}{}
 
-
-%%% \usepackage{hyperref} SHOULD BE INCLUDED IN bibl-settings.sty (which is included by preamb-japanese.sty)
-%%% OR IN preamb-english.sty
-\hypersetup{
-    linkbordercolor={myred!70!white},
-    citebordercolor={myteal!60!white},
-    urlbordercolor={myteal!60!white},
-}
